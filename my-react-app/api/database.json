@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "emily@mail.com",
+      "name": "Emily Reed",
+      "isAdmin": false,
+      "id": 2
+    },
+    {
+        "email": "shelbye@mail.com",
+        "name": "Shelbye Nicoletta",
+        "isAdmin": true,
+        "id": 1
+      }
+  ],
+  "tasks": [],
+  "items": [],
+  "userItems": []
+}
