@@ -7,13 +7,23 @@
       "id": 2
     },
     {
-        "email": "shelbye@mail.com",
-        "name": "Shelbye Nicoletta",
-        "isAdmin": true,
-        "id": 1
-      }
+      "email": "shelbye@mail.com",
+      "name": "Shelbye Nicoletta",
+      "isAdmin": true,
+      "id": 1
+    }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Take Out Trash",
+      "expectedCompletion": "2021-10-10",
+      "description": "take trash out from shop",
+      "notes": "if shop trash is full take trash up top",
+      "status": false,
+      "userId": 1
+    }
+  ],
   "items": [],
   "userItems": []
 }

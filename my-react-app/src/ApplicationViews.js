@@ -1,11 +1,14 @@
 
-// import { TaskForm } from "./tasks/TaskForm"
-// import { TaskList } from "./tasks/TaskList"
-// import { TaskEditForm } from "./tasks/TaskEditForm"
+import { TaskList } from "./tasks/TaskList"
 import React, { useState } from "react"
 import { Route, Redirect } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import { TaskEditForm } from "./tasks/TaskEditForm"
+import { TaskForm } from "./tasks/TaskForm"
+import { ItemList } from "./items/ItemList"
+import { ItemEditForm } from "./items/ItemEditForm"
+import { ItemForm } from "./items/ItemForm"
 // import { NavBar } from "./nav/NavBar"
 // import "./applicationViews.css"
 // import "./nav/NavBar.css"
@@ -25,14 +28,22 @@ export const ApplicationViews = () => {
             <div className="dashboard">
 
                 <Route exact path="/tasks">
-                
-
+                {isAuthenticated ? <TaskList /> : <Redirect to="/login" />}
                 </Route>
                 <Route exact path="/tasks/create">
-                    
+                    <TaskForm />
                 </Route>
                 <Route path="/tasks/:taskId(\d+)/edit">
-                    
+                    <TaskEditForm />
+                </Route>
+                <Route exact path="/items">
+                {isAuthenticated ? <ItemList /> : <Redirect to="/login" />}
+                </Route>
+                <Route exact path="/items/create">
+                    <ItemForm />
+                </Route>
+                <Route path="/items/:itemId(\d+)/edit">
+                    <ItemEditForm />
                 </Route>
                 <Route path="/login">
                     <Login setAuthUser={setAuthUser} />
