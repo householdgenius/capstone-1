@@ -24,6 +24,11 @@
       "userId": 1
     }
   ],
-  "items": [],
+  "items": [
+    {
+      "name": "",
+      "id": 2
+    }
+  ],
   "userItems": []
 }

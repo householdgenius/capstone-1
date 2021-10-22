@@ -6,9 +6,12 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { TaskEditForm } from "./tasks/TaskEditForm"
 import { TaskForm } from "./tasks/TaskForm"
-import { ItemList } from "./items/ItemList"
+import { UserItemList } from "./items/UserItemList"
 import { ItemEditForm } from "./items/ItemEditForm"
 import { ItemForm } from "./items/ItemForm"
+import { ItemList } from "./items/ItemsList"
+import {UserItemForm} from "./items/UserItemForm"
+import {UserItemEditForm} from "./items/UserItemEditForm"
 // import { NavBar } from "./nav/NavBar"
 // import "./applicationViews.css"
 // import "./nav/NavBar.css"
@@ -37,13 +40,20 @@ export const ApplicationViews = () => {
                     <TaskEditForm />
                 </Route>
                 <Route exact path="/items">
+                {isAuthenticated ? <UserItemList /> : <Redirect to="/login" />}
                 {isAuthenticated ? <ItemList /> : <Redirect to="/login" />}
                 </Route>
                 <Route exact path="/items/create">
                     <ItemForm />
                 </Route>
+                <Route exact path="/userItems/:itemId(\d+)/create">
+                    <UserItemForm />
+                </Route>
                 <Route path="/items/:itemId(\d+)/edit">
                     <ItemEditForm />
+                </Route>
+                <Route path="/userItems/:userItemId(\d+)/edit">
+                    <UserItemEditForm />
                 </Route>
                 <Route path="/login">
                     <Login setAuthUser={setAuthUser} />
