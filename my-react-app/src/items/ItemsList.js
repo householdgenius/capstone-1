@@ -18,6 +18,10 @@ export const ItemList = () => {
             .then(() => getAllItems().then(setItems));
     };
 
+    useEffect(() => {
+        getItems();
+    }, []);
+
     return (
         <>
             <div className="card-holder">

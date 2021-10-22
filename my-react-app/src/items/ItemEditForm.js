@@ -3,8 +3,7 @@ import { getItemById, update } from "../modules/ItemManager"
 import { useHistory, useParams } from "react-router"
 
 export const ItemEditForm = () => {
-  const [item, setItem] = useState({ name: ""});
-  const [userItem, setUserItem] = useState({ location:"",description:""});
+  const [item, setItem] = useState({name:"",id:0});
   const [isLoading, setIsLoading] = useState(false);
 
   const { itemId } = useParams();
@@ -16,22 +15,13 @@ export const ItemEditForm = () => {
     setItem(stateToChange);
   };
 
-  const handleFieldChange2 = event => {
-    const stateToChange = { ...userItem };
-    stateToChange[event.target.id] = event.target.value;
-    setUserItem(stateToChange);
-  };
-
   const updateExistingItem = event => {
     event.preventDefault()
     setIsLoading(true);
 
     const editedItem = {
-      id: itemId,
-      name: item.name,
-      location: userItem.location,
-      description: userItem.description,
-      userId: parseInt(sessionStorage.getItem("capstone_user"))
+      name: "",
+      id: itemId
     };
 
     update(editedItem)
@@ -51,7 +41,7 @@ export const ItemEditForm = () => {
       <form>
         <fieldset>
           <div className="formgrid">
-            <label htmlFor="name">Item</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               required
@@ -59,24 +49,6 @@ export const ItemEditForm = () => {
               onChange={handleFieldChange}
               id="name"
               value={item.name}
-            />
-            <label htmlFor="date">Location</label>
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange2}
-              id="location"
-              value={userItem.location}
-            />
-            <label htmlFor="date">Description</label>
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange2}
-              id="description"
-              value={userItem.description}
             />
           </div>
           <div className="alignRight">
@@ -91,4 +63,3 @@ export const ItemEditForm = () => {
     </>
   );
 }
-
