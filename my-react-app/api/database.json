@@ -15,20 +15,29 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "name": "Take Out Trash",
-      "expectedCompletion": "2021-10-10",
-      "description": "take trash out from shop",
-      "notes": "if shop trash is full take trash up top",
-      "status": false,
-      "userId": 1
+      "name": "Emily Reed",
+      "date": "2021-10-06",
+      "description": "helo",
+      "notes": "test",
+      "completed": false,
+      "userId": 1,
+      "id": 2
     }
   ],
   "items": [
     {
-      "name": "",
-      "id": 2
+      "name": "test",
+      "id": 1,
+      "userId": 1
     }
   ],
-  "userItems": []
+  "userItems": [
+    {
+      "itemId": 1,
+      "location": "Clarksville, ",
+      "description": "2",
+      "userId": 1,
+      "id": 1
+    }
+  ]
 }

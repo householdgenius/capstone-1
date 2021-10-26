@@ -10,8 +10,10 @@ export const TaskCard = ({ task, reload, handleDeleteTask }) => {
         taskComplete(task).then(reload)
     }
 
-    const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
+    
 
+    const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
+console.log(task)
     return (
 
         <div className="card">
@@ -23,12 +25,22 @@ export const TaskCard = ({ task, reload, handleDeleteTask }) => {
                 {task.userId === currentUser && <div className="complete"><label htmlFor="complete">complete
                     <input onChange={handleCheckboxComplete} type="checkbox" name="complete" id="complete"></input>
                 </label> </div>}
-                {task.userId === currentUser && <div className="buttons">
-                    <button className="button-7" type="button" onClick={() => handleDeleteTask(task.id)}>Delete</button>
-                    <button className="button-7" type="button" onClick={() => history.push(`/tasks/${task.id}/edit`)}>Edit</button>
-                </div>}
+                    <button 
+                     className="button"
+                     type="button" 
+                     onClick={() => handleDeleteTask(task.id)}
+                     disabled= {task.user.isAdmin && task.userId === currentUser ? false : true}>Delete
+                     </button>
+                    <button 
+                     className="button" 
+                     type="button" 
+                     onClick={() => history.push(`/tasks/${task.id}/edit`)}
+                     disabled= {task.user.isAdmin && task.userId === currentUser ? false : true}>Edit
+                     
+                     </button>
+                </div>
 
             </div>
-        </div>
+        
     );
 }

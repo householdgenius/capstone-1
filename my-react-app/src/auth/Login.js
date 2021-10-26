@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
-// import "./Login.css"
+import "./Login.css"
 
 
 export const Login = () => {
@@ -46,7 +46,7 @@ export const Login = () => {
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Shelbye's Stacks</h1>
                     <h2>Please sign in</h2>
-                    <fieldset>
+                    <fieldset className="box">
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
                             id="email"
@@ -56,11 +56,9 @@ export const Login = () => {
                             value={loginUser.email}
                             onChange={handleInputChange} />
                     </fieldset>
-                    <fieldset>
                         <button type="submit">
                             Sign in
                         </button>
-                    </fieldset>
                 </form>
             </section>
             <section className="link--register">

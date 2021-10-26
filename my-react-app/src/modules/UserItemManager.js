@@ -6,7 +6,7 @@ export const getUserItemById = (itemId) => {
 }
 
 export const getAllUserItems = () => {
-	return fetch(`${remoteURL}`)
+	return fetch(`${remoteURL}?_expand=item`)
 		.then(res => res.json())
 }
 

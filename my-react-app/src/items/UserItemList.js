@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getAllUserItems, deleteUserItem } from "../modules/UserItemManager";
 import { UserItemCard } from "./UserItemCard";
 import { useHistory } from "react-router";
+import "./items.css"
 
 export const UserItemList = () => {
     const [userItems, setUserItems] = useState([]);
@@ -13,7 +14,6 @@ export const UserItemList = () => {
     };
 
     const handleDeleteUserItem = (id) => {
-        console.log(id)
         deleteUserItem(id)
             .then(() => getAllUserItems().then(setUserItems));
     };
@@ -24,6 +24,7 @@ export const UserItemList = () => {
 
     return (
         <>
+        <div className= "holders">
             <div className="card-holder">
                 <div className="cardHolderHeader">
                 </div>
@@ -32,6 +33,7 @@ export const UserItemList = () => {
                         <UserItemCard key={userItem.id} userItem={userItem} handleDeleteUserItem={handleDeleteUserItem} />)}
 
                 </div>
+            </div>
             </div>
         </>
     );

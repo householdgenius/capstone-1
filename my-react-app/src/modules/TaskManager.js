@@ -6,7 +6,7 @@ export const getTaskById = (taskId) => {
 }
 
 export const getAllTasks = () => {
-	return fetch(`${remoteURL}`)
+	return fetch(`${remoteURL}?_expand=user`)
 		.then(res => res.json())
 }
 
