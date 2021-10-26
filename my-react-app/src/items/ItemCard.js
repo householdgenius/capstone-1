@@ -4,6 +4,9 @@ import { useHistory } from "react-router"
 export const ItemCard = ({item, handleDeleteItem}) => {
 
     const history = useHistory();
+
+    const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
+
     return (
 
         <div className="card">
@@ -14,8 +17,18 @@ export const ItemCard = ({item, handleDeleteItem}) => {
                         onClick={() => { history.push(`/userItems/${item.id}/create`) }}>
                         track Item
                     </button>
-                    <button className="button-7" type="button" onClick={() => handleDeleteItem(item.id)}>Delete</button>
-                    <button className="button-7" type="button" onClick={() => history.push(`/items/${item.id}/edit`)}>Edit</button>
+                    <button 
+                     className="button-7"
+                     type="button" 
+                     onClick={() => handleDeleteItem(item.id)} disabled= {currentUser === item.userId ? false : true}>Delete
+                     </button>
+                    <button 
+                     className="button-7" 
+                     type="button" 
+                     onClick={() => history.push(`/items/${item.id}/edit`)} 
+                     disabled= {currentUser === item.userId ? false : true}>Edit
+                     
+                     </button>
             </div>
         </div>
     );

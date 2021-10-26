@@ -22,7 +22,7 @@ export const TaskEditForm = () => {
     const editedTask = {
       id: taskId,
       name: task.name,
-      expectedCompletion: task.date,
+      date: task.date,
       description: task.description,
       notes: task.notes,
       status: false,

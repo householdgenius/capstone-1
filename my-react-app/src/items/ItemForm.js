@@ -5,7 +5,8 @@ import {  addItem } from '../modules/ItemManager'
 export const ItemForm = () => {
     const [item, setItem]= useState({
         name: "",
-        id: 0
+        id: 0,
+        userId: parseInt(sessionStorage.getItem("capstone_user"))
     })
 
     const history = useHistory();

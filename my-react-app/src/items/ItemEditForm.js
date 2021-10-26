@@ -3,7 +3,7 @@ import { getItemById, update } from "../modules/ItemManager"
 import { useHistory, useParams } from "react-router"
 
 export const ItemEditForm = () => {
-  const [item, setItem] = useState({name:"",id:0});
+  const [item, setItem] = useState({name:"",id:0,});
   const [isLoading, setIsLoading] = useState(false);
 
   const { itemId } = useParams();
@@ -20,8 +20,9 @@ export const ItemEditForm = () => {
     setIsLoading(true);
 
     const editedItem = {
-      name: "",
-      id: itemId
+      name: item.name,
+      id: itemId,
+      userId: item.userId
     };
 
     update(editedItem)

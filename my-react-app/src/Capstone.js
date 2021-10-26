@@ -4,8 +4,8 @@ import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
-// import "./Capstone.css"
-// import "./nav/NavBar.css"
+import "./Capstone.css"
+import "./nav/NavBar.css"
 
 export const Capstone = () => (
   <div className="home">

@@ -1,0 +1,26 @@
+.holders{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.item-card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.add-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 75px
+}
+.cardHolderHeader{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}

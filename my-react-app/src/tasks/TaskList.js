@@ -18,23 +18,21 @@ export const TaskList = () => {
 
 
     const handleDeleteTask = (id) => {
-        console.log(id)
         deleteTask(id)
             .then(() => getAllTasks().then(setTasks));
     };
     
     const incompleteTasks = tasks.filter(t => t.completed === false)
-    console.log(incompleteTasks)
     useEffect(() => {
         getTasks();
     }, []);
 
     return (
 		<>
-        <div className="card-holder">
-            <div className="cardHolderHeader">
+        <div className="task-card-holder">
+            <div className="taskcardHolderHeader">
 			<button type="button"
-				className="button-7"
+				className="task-button"
 				onClick={() => {history.push("/tasks/create")}}>
 				Add Task
 			</button>
