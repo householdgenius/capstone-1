@@ -41,6 +41,7 @@ export const ItemEditForm = () => {
     <>
       <form>
         <fieldset>
+        <h2 className="taskForm__title">Edit Item</h2>
           <div className="formgrid">
             <label htmlFor="name">Name</label>
             <input
@@ -53,13 +54,13 @@ export const ItemEditForm = () => {
             />
           </div>
           <div className="alignRight">
-            <button
-              type="button" disabled={isLoading}
-              onClick={updateExistingItem}
-              className="btn btn-primary"
-            >Submit</button>
           </div>
         </fieldset>
+        <button
+              type="button" disabled={isLoading}
+              onClick={updateExistingItem}
+              className="button"
+            >Submit</button>
       </form>
     </>
   );

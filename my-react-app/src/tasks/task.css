@@ -1,8 +1,27 @@
 #root > .card {
     max-width: 400px;
     margin: 10px auto;
+    
   }
   button:disabled,
 button:disabled:hover {
   background-color: lightgray;
+}
+
+.card{
+  background-color:#ffcc66 ;
+width: 200px;
+border-radius: 25px;
+margin: 10px;
+padding: 25px;
+}
+
+.container-cards {
+  display: flex;
+flex-direction: row;
+
+}
+.button {
+  border-radius: 25px;
+
 }

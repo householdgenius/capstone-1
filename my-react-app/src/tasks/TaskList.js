@@ -22,7 +22,7 @@ export const TaskList = () => {
             .then(() => getAllTasks().then(setTasks));
     };
     
-    const incompleteTasks = tasks.filter(t => t.completed === false)
+    // const incompleteTasks = tasks.filter(t => t.completed === false)
     useEffect(() => {
         getTasks();
     }, []);
@@ -32,7 +32,7 @@ export const TaskList = () => {
         <div className="task-card-holder">
             <div className="taskcardHolderHeader">
 			<button type="button"
-				className="task-button"
+				className="button"
 				onClick={() => {history.push("/tasks/create")}}>
 				Add Task
 			</button>

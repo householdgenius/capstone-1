@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import { useHistory } from "react-router";
 import {  addTask } from '../modules/TaskManager'
-
+import "./TaskForm.css"
 export const TaskForm = () => {
     const [task, setTask] = useState({
         name: "",
@@ -32,34 +32,34 @@ export const TaskForm = () => {
     }
      
     return (
-		<form className="taskForm">
-			<h2 className="taskForm__title">New Task</h2>
+		<form className="form-group">
 			<fieldset>
+			<h2 className="taskForm__title">New Task</h2>
 				<div className="form-group">
 					<label htmlFor="name">Task:</label>
 					<input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Task Name" value={task.name} />
 				</div>
-			</fieldset>
-			<fieldset>
+			
+		
 				<div className="form-group">
 					<label htmlFor="date">Expected Completion Date:</label>
 					<input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Expected Completion Date" value={task.date} />
 				</div>
-			</fieldset>
-            <fieldset>
+			
 				<div className="form-group">
 					<label htmlFor="description">description:</label>
 					<input type="text" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Description" value={task.description} />
 				</div>
-			</fieldset>
-            <fieldset>
+		
+        
 				<div className="form-group">
 					<label htmlFor="notes">Notes:</label>
 					<input type="text" id="notes" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Notes" value={task.notes} />
+					<button className="btn btn-primary" onClick={handleClickSaveTask}>Save Task
+          </button>
 				</div>
 			</fieldset>
-			<button className="btn btn-primary" onClick={handleClickSaveTask}>Save Task
-          </button>
+		
 		</form>
 	)
 };

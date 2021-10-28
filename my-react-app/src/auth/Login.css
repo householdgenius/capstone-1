@@ -14,7 +14,17 @@ body{
 }
 
 .link--register{
-    color:white
+    outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  background: #ffcc66;
+  border-radius: .25rem;
+  margin-top: 10px;
 }
 
 .form--login {
@@ -61,6 +71,7 @@ body{
     min-height: 25rem;
     min-width: 45rem;
     background-color: #ffcc66;
+    border-radius: .25rem;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }

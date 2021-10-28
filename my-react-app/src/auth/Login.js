@@ -29,7 +29,7 @@ export const Login = () => {
             .then(exists => {
                 if (exists) {
                     sessionStorage.setItem("capstone_user", exists.id)
-                    history.push("/")
+                    history.push("/tasks")
                 } else {
                     setExistDialog(true)
                 }
@@ -56,13 +56,14 @@ export const Login = () => {
                             value={loginUser.email}
                             onChange={handleInputChange} />
                     </fieldset>
-                        <button type="submit">
+                    
+                        <button type="submit" className="button">
                             Sign in
                         </button>
+                        <button className="button"> <Link to="/register">Register for an account</Link> </button>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Register for an account</Link>
             </section>
         </main>
     )

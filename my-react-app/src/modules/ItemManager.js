@@ -6,7 +6,7 @@ export const getItemById = (id) => {
 }
 
 export const getAllItems = () => {
-	return fetch(`${remoteURL}`)
+	return fetch(`${remoteURL}?_sort=name`)
 		.then(res => res.json())
 }
 

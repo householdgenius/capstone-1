@@ -42,21 +42,22 @@ export const UserItemForm = () => {
 
     return (
         <form className="TaskForm">
-            <h2 className="taskForm__title">New Item</h2>
+            
             <fieldset>
+            <h2 className="taskForm__title">Track Item</h2>
                 <div className="form-group">
                     <label htmlFor="date">Last Seen:</label>
                     <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Location" value={userItem.location} />
                 </div>
-            </fieldset>
-            <fieldset>
+           
+          
                 <div className="form-group">
                     <label htmlFor="description">description:</label>
                     <input type="text" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Description" value={userItem.description} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveItem}>Save Item
-            </button>
+            <button className="button" onClick={handleClickSaveItem}>Save Item
+                </button>
         </form>
     )
 };
