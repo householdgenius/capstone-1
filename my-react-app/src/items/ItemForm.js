@@ -13,7 +13,7 @@ export const ItemForm = () => {
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item}
-        const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
+        // const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
         let selectedVal = event.target.value
         if (event.target.id.includes(" ")) {
             selectedVal = parseInt(selectedVal)
@@ -37,7 +37,7 @@ export const ItemForm = () => {
                     <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Name" value={item.name} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveItem}>Save Item
+            <button className="button" onClick={handleClickSaveItem}>Save Item
             </button>
         </form>
     )

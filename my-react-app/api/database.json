@@ -15,29 +15,49 @@
   ],
   "tasks": [
     {
-      "name": "Emily Reed",
-      "date": "2021-10-06",
-      "description": "helo",
-      "notes": "test",
+      "id": 3,
+      "name": "Take Out Trash ",
+      "date": "2021-09-30",
+      "description": "take trash out from shop",
+      "notes": "if shop trash is full take trash up top",
+      "status": false,
+      "userId": 1
+    },
+    {
+      "name": "cook chicken",
+      "date": "2021-10-30",
+      "description": "Boil and shred chicken",
+      "notes": "put in cooler when done",
       "completed": false,
       "userId": 1,
-      "id": 2
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Do Inventory 3 ",
+      "date": "2021-11-25",
+      "description": "Count inventory for dry storage and disposables",
+      "notes": "Report numbers back to Nicholas to receive shopping list",
+      "status": false,
+      "userId": 1
     }
   ],
   "items": [
     {
-      "name": "test",
-      "id": 1,
+      "name": "Work Uniform",
+      "id": 3,
+      "userId": 1
+    },
+    {
+      "name": "Storage Unit Keys",
+      "id": 4,
+      "userId": 1
+    },
+    {
+      "name": "House Keys",
+      "id": 5,
       "userId": 1
     }
   ],
-  "userItems": [
-    {
-      "itemId": 1,
-      "location": "Clarksville, ",
-      "description": "2",
-      "userId": 1,
-      "id": 1
-    }
-  ]
+  "userItems": []
 }

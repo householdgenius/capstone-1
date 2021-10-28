@@ -1,6 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router"
 import { taskComplete } from "../modules/TaskManager";
+import "./task.css"
 
 
 export const TaskCard = ({ task, reload, handleDeleteTask }) => {
@@ -13,7 +14,7 @@ export const TaskCard = ({ task, reload, handleDeleteTask }) => {
     
 
     const currentUser = parseInt(sessionStorage.getItem("capstone_user"))
-console.log(task)
+
     return (
 
         <div className="card">

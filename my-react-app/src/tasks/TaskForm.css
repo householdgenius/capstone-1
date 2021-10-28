@@ -52,10 +52,25 @@ fieldset .formgrid {
 
 fieldset input, fieldset button, fieldset select {
     grid-column: 2 /4;
-    width: auto;
+    width: 100px;
     margin: 0
 }
 
 fieldset .alignRight {
     text-align: right;
+}
+
+
+.form-control {
+    width: 450px
+}
+
+.taskForm__title {
+    text-align: center;
+}
+
+.task-button{
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
 }

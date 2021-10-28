@@ -13,17 +13,17 @@ export const ItemCard = ({item, handleDeleteItem}) => {
             <div className="card-info">
                 <h3>Item: {(item.name)}</h3>
                 <button type="button"
-                        className="button-7"
+                        className="button"
                         onClick={() => { history.push(`/userItems/${item.id}/create`) }}>
                         track Item
                     </button>
                     <button 
-                     className="button-7"
+                     className="button"
                      type="button" 
                      onClick={() => handleDeleteItem(item.id)} disabled= {currentUser === item.userId ? false : true}>Delete
                      </button>
                     <button 
-                     className="button-7" 
+                     className="button" 
                      type="button" 
                      onClick={() => history.push(`/items/${item.id}/edit`)} 
                      disabled= {currentUser === item.userId ? false : true}>Edit

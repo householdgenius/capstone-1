@@ -24,6 +24,12 @@ export const UserItemList = () => {
 
     return (
         <>
+        <button type="button"
+                        className="button"
+                        onClick={() => { history.push("/items/create") }}>
+                        Add Item
+                    </button>
+        <div className="display">
         <div className= "holders">
             <div className="card-holder">
                 <div className="cardHolderHeader">
@@ -33,6 +39,7 @@ export const UserItemList = () => {
                         <UserItemCard key={userItem.id} userItem={userItem} handleDeleteUserItem={handleDeleteUserItem} />)}
 
                 </div>
+            </div>
             </div>
             </div>
         </>

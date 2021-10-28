@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getTaskById, update } from "../modules/TaskManager"
 import { useHistory, useParams } from "react-router"
-
+import "./TaskForm.css"
 export const TaskEditForm = () => {
   const [task, setTask] = useState({ name: "", date: "", description: "", notes: "" });
   const [isLoading, setIsLoading] = useState(false);
@@ -45,7 +45,8 @@ export const TaskEditForm = () => {
     <>
       <form>
         <fieldset>
-          <div className="formgrid">
+        <h2 className="taskForm__title">Edit Task</h2>
+          <div className="formgroup">
             <label htmlFor="name">Task</label>
             <input
               type="text"
@@ -66,13 +67,13 @@ export const TaskEditForm = () => {
             />
           </div>
           <div className="alignRight">
-            <button
-              type="button" disabled={isLoading}
-              onClick={updateExistingTask}
-              className="btn btn-primary"
-            >Submit</button>
           </div>
         </fieldset>
+        <button
+              type="button" disabled={isLoading}
+              onClick={updateExistingTask}
+              className="button"
+            >Submit</button>
       </form>
     </>
   );
